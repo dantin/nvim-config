@@ -98,8 +98,8 @@ return {
                     capabilities = capabilities,
                 })
             end,
+            -- configure svelte server
             ["svelte"] = function()
-                -- configure svelte server
                 lspconfig["svelte"].setup({
                     capabilities = capabilities,
                     on_attach = function(client, bufnr)
@@ -113,22 +113,34 @@ return {
                     end,
                 })
             end,
+            -- configure graphql language server
             ["graphql"] = function()
-                -- configure graphql language server
                 lspconfig["graphql"].setup({
                     capabilities = capabilities,
                     filetypes = { "graphql", "gql", "svelte", "typescriptreact", "javascriptreact" },
                 })
             end,
+            -- configure emmet language server
             ["emmet_ls"] = function()
-                -- configure emmet language server
                 lspconfig["emmet_ls"].setup({
                     capabilities = capabilities,
                     filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
                 })
             end,
+            -- configure go language server
+            ["gopls"] = function()
+                lspconfig["gopls"].setup({
+                    capabilities = capabilities
+                })
+            end,
+            ["html"] = function()
+                lspconfig["html"].setup({
+                    capabilities = capabilities,
+                    filetypes = {"html", "templ"}
+                })
+            end,
+            -- configure lua server (with special settings)
             ["lua_ls"] = function()
-                -- configure lua server (with special settings)
                 lspconfig["lua_ls"].setup({
                     capabilities = capabilities,
                     settings = {

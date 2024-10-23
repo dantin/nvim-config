@@ -34,13 +34,14 @@ return {
                 "svelte",
                 "lua_ls",
                 "graphql",
+                "gopls",
                 "emmet_ls",
                 "prismals",
                 "pyright",
             },
             -- auto-install configured servers (with lspconfig)
             -- not the same as ensure_installed
-            -- automatic_installation = true,
+            automatic_installation = true,
         })
 
         mason_tool_installer.setup({
@@ -49,6 +50,8 @@ return {
                 "stylua", -- lua formatter
                 "isort", -- python formatter
                 "black", -- python formatter
+                "pylint", -- python linter
+                "golines", -- go formatter
                 "pylint", -- python linter
                 "eslint_d", -- js linter
             },
