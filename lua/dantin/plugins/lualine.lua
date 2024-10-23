@@ -53,7 +53,7 @@ return {
         -- configure lualien with modified theme.
         lualine.setup({
             options = {
-            theme = my_lualine_theme,
+                theme = my_lualine_theme,
             },
             sections = {
                 lualine_x = {

@@ -1,3 +1,5 @@
+vim.cmd("let g:netrw_liststyle = 3")
+
 local opt = vim.opt  -- for conciseness
 
 -- line numbers
@@ -20,7 +22,8 @@ opt.smartcase = true
 -- cursor line
 opt.cursorline = true
 
--- appearance
+-- turn on termguicolors for tokyonight colorscheme to work
+-- (have to use iterm2 or any other true color terminal)
 opt.termguicolors = true
 opt.background = "dark"
 opt.signcolumn = "yes"
